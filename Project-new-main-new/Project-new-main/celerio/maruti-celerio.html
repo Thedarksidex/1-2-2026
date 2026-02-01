@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maruti Celerio 2024</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0d6efd;
+  --secondary:#ff7a18;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --bg:#f6f8fb;
+  --radius:14px;
+  --container:1100px;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--bg);color:#111827;line-height:1.45;}
+.wrap{max-width:var(--container);margin:0 auto;padding:28px 20px;}
+
+/* Header */
+header.sitebar{
+  display:flex;align-items:center;gap:16px;padding:18px 28px;
+  background:rgba(255,255,255,0.45);backdrop-filter:blur(10px);
+  border-radius:16px;
+  box-shadow:0 8px 28px rgba(0,0,0,0.12);
+  position:sticky;top:16px;z-index:10;
+  transition:0.3s ease;
+}
+header.sitebar:hover{box-shadow:0 14px 40px rgba(0,0,0,0.18);}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit;cursor:pointer;}
+.brand-logo{
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:20px;
+  box-shadow:0 8px 18px rgba(13,110,253,0.2);
+  transition:transform 0.25s ease;
+}
+.brand-logo:hover{transform:scale(1.15);}
+.brand h1{font-size:18px;margin:0;line-height:1;font-weight:700;}
+.brand p{margin:0;font-size:12px;color:var(--muted)}
+
+/* Hero Section */
+.hero{display:flex;flex-wrap:wrap;gap:20px;margin-top:30px;}
+.hero-info{flex:1;min-width:300px;}
+.hero-info h2{font-size:28px;color:var(--primary);margin-bottom:8px;}
+.hero-info p{font-size:14px;color:var(--muted);margin-bottom:12px;}
+
+/* Video Section */
+.video-hero{
+  position:relative;width:100%;margin:50px 0;height:450px;
+  display:flex;justify-content:center;align-items:center;overflow:hidden;
+  border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+.video-hero video{
+  width:100%;height:100%;object-fit:cover;border-radius:12px;
+  filter:brightness(0.85);
+}
+.video-overlay{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  display:flex;justify-content:center;align-items:center;
+  color:#fff;font-size:28px;font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,0.5);
+}
+
+/* Specifications */
+.spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px;}
+@media(max-width:720px){.spec-grid{grid-template-columns:1fr}}
+.spec-item{background:#fff;padding:12px;border-radius:10px;border:1px solid #eef4ff;}
+.spec-item strong{display:block;color:var(--muted);font-size:13px;}
+.spec-item span{font-weight:700;font-size:15px;color:#111827;margin-top:6px;display:block;}
+
+/* Gallery Section */
+.gallery-section{
+  margin:50px 0;
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.06);
+}
+.gallery-wrap{display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;}
+.thumbs{display:flex;flex-direction:column;gap:10px;}
+.thumbs img{width:78px;height:54px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:0.3s;}
+.thumbs img.active{border-color:var(--primary);}
+.main-photo{flex:1;border-radius:12px;overflow:hidden;height:330px;background:#f9fbfd;display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,0.04);}
+.main-photo img{width:100%;height:100%;object-fit:cover;}
+
+/* Latest Updates */
+.latest-updates ul{margin:12px 0 24px 20px;list-style:disc;}
+.latest-updates li{margin-bottom:10px;font-size:14px;color:#111827;}
+
+/* Pros & Cons */
+.pros-cons table{width:100%;border-collapse:collapse;margin-top:20px;}
+.pros-cons th, .pros-cons td{border:1px solid #ddd;padding:12px;text-align:left;}
+.pros-cons th{background:var(--primary);color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- Header -->
+  <header class="sitebar">
+    <a class="brand" href="#">
+      <div class="brand-logo">MC</div>
+      <div>
+        <h1>Maruti • Celerio</h1>
+        <p>Smart City Hatchback • 2024</p>
+      </div>
+    </a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-info">
+      <h2>Maruti Celerio 2024</h2>
+      <p>The Maruti Celerio is a compact hatchback admired for its easy drivability, efficient mileage, and affordability, ideal for city commuters.</p>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="celerio_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay">Experience Maruti Celerio in Motion</div>
+  </section>
+
+  <!-- Specifications -->
+  <section>
+    <h3>Specifications</h3>
+    <div class="spec-grid">
+      <div class="spec-item"><strong>Engine</strong><span>1.0L Petrol / CNG</span></div>
+      <div class="spec-item"><strong>Power</strong><span>65 bhp (Petrol)</span></div>
+      <div class="spec-item"><strong>Mileage</strong><span>24–26 kmpl / 34 km/kg (CNG)</span></div>
+      <div class="spec-item"><strong>Transmission</strong><span>Manual / AMT</span></div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <h3>Gallery</h3>
+    <div class="gallery-wrap">
+      <div class="thumbs" id="thumbs"></div>
+      <div class="main-photo" id="mainPhoto">
+        <img src="celerio1.jpg" alt="Celerio main photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Updates -->
+  <section class="latest-updates">
+    <h3>Latest Updates</h3>
+    <ul>
+      <li>New-age design with sleek headlights and dynamic front grille.</li>
+      <li>Next-gen DualJet engine for improved performance and economy.</li>
+      <li>SmartPlay infotainment with Android Auto & Apple CarPlay.</li>
+      <li>Enhanced safety with dual airbags and ABS with EBD.</li>
+      <li>Idle Start-Stop technology for better fuel efficiency.</li>
+    </ul>
+  </section>
+
+  <!-- Pros & Cons -->
+  <section class="pros-cons">
+    <h3>Pros & Cons</h3>
+    <table>
+      <thead>
+        <tr><th>Pros</th><th>Cons</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Excellent mileage with Petrol and CNG options.</td>
+          <td>Cabin design feels basic compared to rivals.</td>
+        </tr>
+        <tr>
+          <td>Light steering — perfect for city driving.</td>
+          <td>Limited boot space for long trips.</td>
+        </tr>
+        <tr>
+          <td>Low maintenance and budget-friendly ownership.</td>
+          <td>Engine performance moderate on highways.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
+
+<script>
+// Gallery Script
+let thumbs = document.getElementById("thumbs");
+let mainPhoto = document.getElementById("mainPhoto").querySelector("img");
+let images = ["celerio1.jpg","celerio2.jpg","celerio3.jpg","celerio4.jpg"];
+images.forEach((img,i)=>{
+  let t=document.createElement("img");
+  t.src=img;t.alt="Celerio "+(i+1);
+  t.onclick=()=>{mainPhoto.src=img; updateActive(i);}
+  if(i==0) t.classList.add("active");
+  thumbs.appendChild(t);
+})
+function updateActive(index){
+  Array.from(thumbs.children).forEach((t,i)=>{t.classList.toggle("active",i==index);});
+}
+</script>
+
+</body>
+</html>
