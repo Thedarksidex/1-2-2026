@@ -1,0 +1,54 @@
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.exe
+*.dll
+
+# Logs
+logs/
+*.log
+lerna-debug.log*
+
+# Local development
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache and temporary files
+.cache/
+temp/
+tmp/
+.parcel-cache
+
+# Browser extensions
+node_modules/
+
+# IDE cache
+.eslintcache
+
+# Misc files
+*.backup
+*.tmp
+*.swp
+~*
+
+# Package manager lock files (optional - uncomment if using)
+# package-lock.json
+# yarn.lock

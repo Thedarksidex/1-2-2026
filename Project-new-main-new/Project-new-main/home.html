@@ -22,7 +22,7 @@
     <li><a href="#cars">Cars</a></li>
     <li><a href="#features">Features</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#login">login</a></li>
+    <li><a id="navbar-user" href="auth.html">login</a></li>
   </ul>
 
   <!-- Hamburger Icon for small screens -->
@@ -36,7 +36,7 @@
     <li><a href="#cars" onclick="toggleMenu()">Cars</a></li>
     <li><a href="#features" onclick="toggleMenu()">Features</a></li>
     <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-    <li><a href="#login" onclick="toggleMenu()">Login</a></li>
+    <li><a id="mobile-user" href="auth.html" onclick="toggleMenu()">Login</a></li>
   </ul>
 </div>
 
@@ -179,11 +179,55 @@
 
     <!-- Review Form -->
     <form class="review-form" id="reviewForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="text" id="car" placeholder="Car Model" required>
-      <textarea id="review" placeholder="Your Experience" required></textarea>
-      <button type="submit">Submit Review</button>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <span class="error" id="name-error"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Your Email" required>
+        <span class="error" id="email-error"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="car" placeholder="Car Model" required>
+        <span class="error" id="car-error"></span>
+      </div>
+
+      <div class="form-group">
+        <textarea id="review" placeholder="Your Experience" required></textarea>
+        <span class="error" id="review-error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="rating">Rating (Optional):</label>
+        <div class="rating-stars">
+          <span class="star" data-value="1">⭐</span>
+          <span class="star" data-value="2">⭐</span>
+          <span class="star" data-value="3">⭐</span>
+          <span class="star" data-value="4">⭐</span>
+          <span class="star" data-value="5">⭐</span>
+        </div>
+        <input type="hidden" id="rating" value="0">
+        <span class="rating-text" id="rating-text"></span>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Review</button>
+      <span class="success-msg" id="success-msg"></span>
+      <span class="error" id="form-error"></span>
     </form>
+
+    <!-- Stats -->
+    <div class="feedback-stats" id="feedbackStats">
+      <div class="stat-box">
+        <h3 id="totalReviews">0</h3>
+        <p>Total Reviews</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="avgRating">0</h3>
+        <p>Average Rating</p>
+      </div>
+    </div>
 
     <!-- Reviews -->
     <div class="review-grid" id="reviewGrid"></div>
@@ -191,7 +235,6 @@
   </div>
 </section>
 
-<script src="review.js"></script>
 </body>
 </html>
 
